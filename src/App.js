@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
 
 function App() {
+  const Wrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    background: ${(props) => props.background};
+    padding: ${(props) => props.padding};
+    &:hover {
+      background: #000
+    }
+  `
+  const Title = styled.h1`
+    color: black
+  `
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Wrapper background="#ddd" padding="0 0 0 10px">
+      <Title>
+        Hello World
+      </Title>
+    </Wrapper>
+    </>
   );
 }
 
