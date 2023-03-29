@@ -1,7 +1,17 @@
+import { ThemeProvider } from "styled-components";
+import Navbar from "./components/Navbar";
+import { Container } from "./styles/container";
+import { GlobalStyle, lightTheme } from "./styles/globalStyle";
+
 function App() {
   return (
     <>
-      adasdas
+      <ThemeProvider theme={lightTheme}>
+        <Navbar />
+        <Container>
+          <GlobalStyle />
+        </Container>
+      </ThemeProvider>
     </>
   );
 }
