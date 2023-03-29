@@ -1,14 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Logo } from "../constants";
 import { Image } from "../styles";
 import { Container } from "../styles/container";
-import { NavbarBox } from "../styles/navbar";
+import { Li, NavbarBox, NavbarItems, Ul } from "../styles/navbar";
 
 function Navbar() {
   return (
     <NavbarBox>
       <Container>
-        <Image src={Logo} alt="Logo" width="60px" height="60px" />
+        <NavbarItems>
+          <Image src={Logo} alt="Logo" width="60px" height="60px" />
+          <Ul>
+            <Li>
+                <Link to="/courses" className="link">Kurslar</Link>
+            </Li>
+            <Li>
+                <Link to="/connect" className="link">Bog'lanish</Link>
+            </Li>
+          </Ul>
+        </NavbarItems>
       </Container>
     </NavbarBox>
   );
