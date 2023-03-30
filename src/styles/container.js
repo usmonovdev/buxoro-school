@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ExtraLarge, Medium, Small } from "./breakpoints";
+import { ExtraLarge, Medium } from "./breakpoints";
 
 export const Container = styled.div`
     width: 70vw;
@@ -9,8 +9,5 @@ export const Container = styled.div`
     };
     @media (max-width: ${Medium}) {
         width: 90vw
-    };
-    @media (max-width: ${Small}) {
-        width: 95vw
     };
 `

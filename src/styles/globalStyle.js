@@ -56,7 +56,7 @@ export const lightTheme = {
     blue: "#003555",
     white: "#f5efe3",
     black: "#160f01",
-    blkTransparent: "#02101999",
+    blkTransparent: "#2b1d05bf",
 };
 
 export const darkTheme = {};

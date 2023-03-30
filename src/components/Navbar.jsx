@@ -56,7 +56,7 @@ function Navbar() {
           </UlLarge>
         </NavbarLarge>
         <NavbarSmall>
-          <Image zIndex src={Logo} alt="Logo" width="60px" height="60px" />
+          <Image src={Logo} alt="Logo" width="60px" height="60px" />
           <Hamburger
             rounded
             color={theme.orange}
