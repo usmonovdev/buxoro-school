@@ -10,7 +10,7 @@ export const NavbarBox = styled.div`
     background: ${props => props.theme.white};
     display: flex;
     align-items: center;
-    box-shadow: 0px 8px 20px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 8px 20px 0px rgba(34, 60, 80, 0.1);
     transform: ${props => (props.top ? "translateY(-80px)" : "translateY(0)")};
     transition: 200ms;
 `
