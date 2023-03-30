@@ -6,7 +6,16 @@ import { Logo } from "../constants";
 import { Image } from "../styles";
 import { Button } from "../styles/button";
 import { Container } from "../styles/container";
-import { Li, NavbarBox, NavbarLarge, NavbarSmall, Ul, UlLarge, UlSmall } from "../styles/navbar";
+import {
+  Li,
+  NavbarBox,
+  NavbarLarge,
+  NavbarSmall,
+  UlBox,
+  UlDetails,
+  UlLarge,
+  UlSmall,
+} from "../styles/navbar";
 
 function Navbar() {
   const theme = useTheme();
@@ -45,31 +54,33 @@ function Navbar() {
             toggle={setOpen}
           />
           {isOpen ? (
-            <>
-              <UlSmall>
-                <Li>
-                  <Link to="/courses" className="link">
-                    Kurslar
-                  </Link>
-                </Li>
-                <Li>
-                  <Link to="/connect" className="link">
-                    Bog'lanish
-                  </Link>
-                </Li>
-                <Li>
-                  <Link to="/sign-up" className="link">
-                    <Button
-                      textTransform="uppercase"
-                      width="100px"
-                      height="40px"
-                    >
-                      Sign Up
-                    </Button>
-                  </Link>
-                </Li>
-              </UlSmall>
-            </>
+            <UlBox>
+              <UlDetails>
+                <UlSmall>
+                  <Li>
+                    <Link to="/courses" className="link-small">
+                      Kurslar
+                    </Link>
+                  </Li>
+                  <Li>
+                    <Link to="/connect" className="link-small">
+                      Bog'lanish
+                    </Link>
+                  </Li>
+                  <Li>
+                    <Link to="/sign-up" className="link-small">
+                      <Button
+                        textTransform="uppercase"
+                        width="100%"
+                        height="40px"
+                      >
+                        Sign Up
+                      </Button>
+                    </Link>
+                  </Li>
+                </UlSmall>
+              </UlDetails>
+            </UlBox>
           ) : (
             ""
           )}

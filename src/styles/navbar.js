@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Small } from "./breakpoints";
+import styled, { keyframes } from "styled-components";
+import { ExtraSmall, Small } from "./breakpoints";
 
 export const NavbarBox = styled.div`
     height: 60px;
@@ -37,19 +37,56 @@ export const UlLarge = styled.ul`
     align-items: center;
     gap: 20px;
 `
-
-export const UlSmall = styled.ul`
-    position: absolute;
+export const UlBox = styled.div`
+    position: fixed;
     top: 0;
     right: 0;
-    width: 60vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 70px 0 0 0;
+    margin: 0;
     padding: 0;
-    background: ${props => props.theme.blue}
+    background: ${props => props.theme.blkTransparent};
+`
+
+const translate = keyframes`
+    from {
+        opacity: 0.4;
+        transform: scaleX(0.7)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+`
+
+export const UlDetails = styled.div`
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: ${props => props.theme.blue};
+    animation: ${translate} 150ms linear both;
+    transform-origin: right;
+    @media (max-width: ${ExtraSmall}) {
+        width: 100%;
+    }
+`
+
+export const UlSmall = styled.ul`
+    position: relative;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: ${props => props.theme.white};
+    padding: 0 30px 0 30px;
 `
 
 export const Li = styled.li`

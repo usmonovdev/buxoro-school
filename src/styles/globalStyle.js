@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         background: ${props => props.theme.body};
         font-family: 'Raleway', sans-serif;
         font-size: 1.1rem;
+        overflow-x: hidden;
     };
     .link {
         text-decoration: none;
@@ -18,12 +19,35 @@ export const GlobalStyle = createGlobalStyle`
             color: unset;
         }
     };
+    .link-small {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: ${props => props.theme.black};
+        background: ${props => props.theme.body};
+        border-radius: 10px;
+        &:active {
+            color: ${props => props.theme.black};
+        }
+    };
     .hamburger-react {
         z-index: 100;
     };
     ::-webkit-scrollbar {
-        display: none;
-    }
+        width: 5px;
+    };
+    ::-webkit-scrollbar-track {
+        background: ${props => props.theme.white};
+    };
+    ::-webkit-scrollbar-thumb {
+        background: ${props => props.theme.orange};
+        border-radius: 10px;
+    };
 `
 
 export const lightTheme = {
@@ -32,6 +56,7 @@ export const lightTheme = {
     blue: "#003555",
     white: "#f5efe3",
     black: "#160f01",
+    blkTransparent: "#02101999",
 };
 
 export const darkTheme = {};

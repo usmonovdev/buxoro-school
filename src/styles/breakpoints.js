@@ -1,3 +1,6 @@
+/* Extra large devices */
+export const ExtraSmall = "450px"
+
 /* Extra small devices (phones, 600px and down) */
 export const Small = "600px"
 

@@ -16,5 +16,6 @@ export const Button = styled.button`
     transition: 200ms;
     &:hover {
         box-shadow: -6px 4px 20px -1px rgba(34, 60, 80, 0.3);
+        filter: brightness(0.8);
     }
 `
