@@ -17,12 +17,18 @@ export const GlobalStyle = createGlobalStyle`
         &:active {
             color: unset;
         }
+    };
+    .hamburger-react {
+        z-index: 100;
+    };
+    ::-webkit-scrollbar {
+        display: none;
     }
 `
 
 export const lightTheme = {
     body: '#fff6f1',
-    orange: '#ffae5f',
+    orange: '#9c7123',
     blue: "#003555",
     white: "#f5efe3",
     black: "#160f01",
