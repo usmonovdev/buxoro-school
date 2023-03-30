@@ -1,5 +1,5 @@
 import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "styled-components";
 import { Logo } from "../constants";
@@ -20,8 +20,18 @@ import {
 function Navbar() {
   const theme = useTheme();
   const [isOpen, setOpen] = useState(false);
+  const [isScroll, setScroll] = useState(false);
+
+  var prevScroll = window.pageYOffset;
+  window.onscroll = () => {
+    var currentScroll = window.pageYOffset;
+    isOpen ? window.scrollTo(0, 0) :
+    prevScroll < currentScroll ? setScroll(true) : setScroll(false);
+    prevScroll = currentScroll;
+  };
+
   return (
-    <NavbarBox>
+    <NavbarBox top={isScroll}>
       <Container>
         <NavbarLarge>
           <Image src={Logo} alt="Logo" width="60px" height="60px" />

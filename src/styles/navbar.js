@@ -2,11 +2,17 @@ import styled, { keyframes } from "styled-components";
 import { ExtraSmall, Small } from "./breakpoints";
 
 export const NavbarBox = styled.div`
+    position: sticky;
+    top: 0;
+    width: 100vw;
     height: 60px;
     padding: 10px 0 10px 0;
     background: ${props => props.theme.white};
     display: flex;
     align-items: center;
+    box-shadow: 0px 8px 20px 0px rgba(34, 60, 80, 0.2);
+    transform: ${props => (props.top ? "translateY(-80px)" : "translateY(0)")};
+    transition: 200ms;
 `
 
 export const NavbarLarge = styled.div`
@@ -81,7 +87,7 @@ export const UlDetails = styled.div`
 
 export const UlSmall = styled.ul`
     position: relative;
-    top: 60px;
+    top: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
