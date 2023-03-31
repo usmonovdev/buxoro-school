@@ -10,7 +10,7 @@ export const Button = styled.button`
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     box-shadow: -6px 4px 20px -1px rgba(34, 60, 80, 0.2);
     transition: 200ms;
